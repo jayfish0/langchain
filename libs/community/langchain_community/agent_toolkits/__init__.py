@@ -6,6 +6,9 @@ import importlib
 from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
+    from langchain_community.agent_toolkits.agentql.toolkit import (
+        AgentQLToolkit,
+    )
     from langchain_community.agent_toolkits.ainetwork.toolkit import (
         AINetworkToolkit,
     )
@@ -98,6 +101,7 @@ if TYPE_CHECKING:
     )
 
 __all__ = [
+    "AgentQLToolkit",
     "AINetworkToolkit",
     "AmadeusToolkit",
     "AzureAiServicesToolkit",
@@ -131,6 +135,7 @@ __all__ = [
 
 
 _module_lookup = {
+    "AgentQLToolkit": "langchain_community.agent_toolkits.agentql.toolkit",
     "AINetworkToolkit": "langchain_community.agent_toolkits.ainetwork.toolkit",
     "AmadeusToolkit": "langchain_community.agent_toolkits.amadeus.toolkit",
     "AzureAiServicesToolkit": "langchain_community.agent_toolkits.azure_ai_services",
